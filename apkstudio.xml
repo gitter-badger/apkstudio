@@ -1,7 +1,8 @@
+
 <project>
     <shortName>apkstudio</shortName>
     <fullName>APK Studio</fullName>
-    <version>0978cd4</version>
+    <version>d49d3de</version>
     <installerFilename>${product_shortname}-${product_version}-${platform_name}.${platform_exec_suffix}</installerFilename>
     <leftImage>${build_project_directory}/assets/sidebar.png</leftImage>
     <logoImage>${build_project_directory}/assets/apkstudio.png</logoImage>
@@ -59,6 +60,27 @@
                     <name>programfileslinux</name>
                     <platforms>linux</platforms>
                     <distributionFileList>
+                        <distributionFile>
+                            <origin>${build_project_directory}/assets/apkstudio.png</origin>
+                        </distributionFile>
+                        <distributionFile>
+                            <origin>${build_project_directory}/linux/apkstudio</origin>
+                        </distributionFile>
+                        <distributionFile>
+                            <origin>${build_project_directory}/linux/apkstudio.sh</origin>
+                        </distributionFile>
+                        <distributionFile>
+                            <origin>${build_project_directory}/linux/libQt5Core.so.5</origin>
+                        </distributionFile>
+                        <distributionFile>
+                            <origin>${build_project_directory}/linux/libQt5Gui.so.5</origin>
+                        </distributionFile>
+                        <distributionFile>
+                            <origin>${build_project_directory}/linux/libQt5Widgets.so.5</origin>
+                        </distributionFile>
+                        <distributionDirectory>
+                            <origin>${build_project_directory}/linux/platforms</origin>
+                        </distributionDirectory>
                         <distributionFile>
                             <origin>${build_project_directory}/assets/apkstudio.png</origin>
                         </distributionFile>
@@ -196,4 +218,3 @@
         </directoryParameter>
     </parameterList>
 </project>
-
