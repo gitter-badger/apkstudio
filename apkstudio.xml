@@ -99,16 +99,7 @@
                             <origin>${build_project_directory}/windows/apkstudio.exe</origin>
                         </distributionFile>
                         <distributionFile>
-                            <origin>${build_project_directory}/windows/D3Dcompiler_47.dll</origin>
-                        </distributionFile>
-                        <distributionFile>
-                            <origin>${build_project_directory}/windows/libEGL.dll</origin>
-                        </distributionFile>
-                        <distributionFile>
                             <origin>${build_project_directory}/windows/libgcc_s_dw2-1.dll</origin>
-                        </distributionFile>
-                        <distributionFile>
-                            <origin>${build_project_directory}/windows/libGLESV2.dll</origin>
                         </distributionFile>
                         <distributionFile>
                             <origin>${build_project_directory}/windows/libstdc++-6.dll</origin>
@@ -122,20 +113,8 @@
                         <distributionFile>
                             <origin>${build_project_directory}/windows/Qt5Gui.dll</origin>
                         </distributionFile>
-                        <distributionFile>
-                            <origin>${build_project_directory}/windows/Qt5Svg.dll</origin>
-                        </distributionFile>
-                        <distributionDirectory>
-                            <origin>${build_project_directory}/windows/iconengines</origin>
-                        </distributionDirectory>
-                        <distributionDirectory>
-                            <origin>${build_project_directory}/windows/imageformats</origin>
-                        </distributionDirectory>
                         <distributionDirectory>
                             <origin>${build_project_directory}/windows/platforms</origin>
-                        </distributionDirectory>
-                        <distributionDirectory>
-                            <origin>${build_project_directory}/windows/translations</origin>
                         </distributionDirectory>
                         <distributionFile>
                             <origin>${build_project_directory}/assets/apkstudio.ico</origin>
