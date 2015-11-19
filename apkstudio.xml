@@ -1,7 +1,7 @@
 <project>
     <shortName>apkstudio</shortName>
     <fullName>APK Studio</fullName>
-    <version>bf51710</version>
+    <version>0978cd4</version>
     <installerFilename>${product_shortname}-${product_version}-${platform_name}.${platform_exec_suffix}</installerFilename>
     <leftImage>${build_project_directory}/assets/sidebar.png</leftImage>
     <logoImage>${build_project_directory}/assets/apkstudio.png</logoImage>
@@ -176,6 +176,7 @@
     <compressionAlgorithm>lzham-ultra</compressionAlgorithm>
     <enableRollback>1</enableRollback>
     <enableTimestamp>1</enableTimestamp>
+    <productDisplayIcon>${installdir}/apkstudio.ico</productDisplayIcon>
     <saveRelativePaths>1</saveRelativePaths>
     <vendor>Vaibhav Pandey</vendor>
     <windowsExecutableIcon>${build_project_directory}/assets/apkstudio.ico</windowsExecutableIcon>

@@ -2,6 +2,6 @@
     "apktool": {
         "commit": "ee9d44c7859b5469884320ad7f3779bdbd1c6e35",
         "tag": "2.0.2",
-        "url": "https://github.com/fesh0r/fernflower"
+        "url": "http://ibotpeaches.github.io/Apktool/"
     }
 }
