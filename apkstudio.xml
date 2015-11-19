@@ -1,4 +1,3 @@
-
 <project>
     <shortName>apkstudio</shortName>
     <fullName>APK Studio</fullName>
@@ -81,9 +80,35 @@
                         <distributionDirectory>
                             <origin>${build_project_directory}/linux/platforms</origin>
                         </distributionDirectory>
+                    </distributionFileList>
+                </folder>
+                <folder>
+                    <description>Program Files</description>
+                    <destination>${installdir}</destination>
+                    <name>programfileslinux64</name>
+                    <platforms>linux-x64</platforms>
+                    <distributionFileList>
                         <distributionFile>
                             <origin>${build_project_directory}/assets/apkstudio.png</origin>
                         </distributionFile>
+                        <distributionFile>
+                            <origin>${build_project_directory}/linux/apkstudio.sh</origin>
+                        </distributionFile>
+                        <distributionFile>
+                            <origin>${build_project_directory}/linux64/apkstudio</origin>
+                        </distributionFile>
+                        <distributionFile>
+                            <origin>${build_project_directory}/linux64/libQt5Core.so.5</origin>
+                        </distributionFile>
+                        <distributionFile>
+                            <origin>${build_project_directory}/linux64/libQt5Gui.so.5</origin>
+                        </distributionFile>
+                        <distributionFile>
+                            <origin>${build_project_directory}/linux64/libQt5Widgets.so.5</origin>
+                        </distributionFile>
+                        <distributionDirectory>
+                            <origin>${build_project_directory}/linux64/platforms</origin>
+                        </distributionDirectory>
                     </distributionFileList>
                 </folder>
                 <folder>
@@ -92,9 +117,6 @@
                     <name>programfileswindows</name>
                     <platforms>windows</platforms>
                     <distributionFileList>
-                        <distributionFile>
-                            <origin>${build_project_directory}/windows/Qt5Widgets.dll</origin>
-                        </distributionFile>
                         <distributionFile>
                             <origin>${build_project_directory}/windows/apkstudio.exe</origin>
                         </distributionFile>
@@ -112,6 +134,9 @@
                         </distributionFile>
                         <distributionFile>
                             <origin>${build_project_directory}/windows/Qt5Gui.dll</origin>
+                        </distributionFile>
+                        <distributionFile>
+                            <origin>${build_project_directory}/windows/Qt5Widgets.dll</origin>
                         </distributionFile>
                         <distributionDirectory>
                             <origin>${build_project_directory}/windows/platforms</origin>
