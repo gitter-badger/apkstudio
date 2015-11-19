@@ -1,0 +1,5 @@
+vendor/*.jar
+windows/*
+
+*.xml.backup
+!.gitignore

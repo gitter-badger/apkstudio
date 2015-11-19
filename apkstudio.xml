@@ -1,7 +1,11 @@
 <project>
     <shortName>apkstudio</shortName>
     <fullName>APK Studio</fullName>
-    <version></version>
+    <version>bf51710</version>
+    <installerFilename>${product_shortname}-${product_version}-${platform_name}.${platform_exec_suffix}</installerFilename>
+    <leftImage>${build_project_directory}/assets/sidebar.png</leftImage>
+    <logoImage>${build_project_directory}/assets/apkstudio.png</logoImage>
+    <splashImage>${build_project_directory}/assets/splash.png</splashImage>
     <componentList>
         <component>
             <name>default</name>
@@ -9,6 +13,23 @@
             <canBeEdited>1</canBeEdited>
             <selected>1</selected>
             <show>1</show>
+            <desktopShortcutList>
+                <shortcut>
+                    <comment></comment>
+                    <exec>${installdir}/${product_shortname}.sh</exec>
+                    <icon>${installdir}/apkstudio.png</icon>
+                    <name>APK Studio</name>
+                    <noPinToStart>0</noPinToStart>
+                    <path>${installdir}/</path>
+                    <platforms>all</platforms>
+                    <runAsAdmin>0</runAsAdmin>
+                    <runInTerminal>0</runInTerminal>
+                    <windowsExec>${installdir}/${product_shortname}.exe</windowsExec>
+                    <windowsExecArgs></windowsExecArgs>
+                    <windowsIcon>${installdir}/apkstudio.ico</windowsIcon>
+                    <windowsPath>${installdir}/</windowsPath>
+                </shortcut>
+            </desktopShortcutList>
             <folderList>
                 <folder>
                     <description>Program Files</description>
@@ -20,14 +41,14 @@
                             <comment>Uninstall</comment>
                             <exec>${installdir}/${uninstallerName}</exec>
                             <icon></icon>
-                            <name>Uninstall ${product_fullname}</name>
+                            <name>Uninstall</name>
                             <path>${installdir}</path>
                             <platforms>all</platforms>
                             <runAsAdmin>0</runAsAdmin>
                             <runInTerminal>0</runInTerminal>
                             <windowsExec>${installdir}/${uninstallerName}.exe</windowsExec>
                             <windowsExecArgs></windowsExecArgs>
-                            <windowsIcon></windowsIcon>
+                            <windowsIcon>${build_project_directory}/assets/apkstudio.ico</windowsIcon>
                             <windowsPath>${installdir}</windowsPath>
                         </shortcut>
                     </shortcutList>
@@ -37,12 +58,67 @@
                     <destination>${installdir}</destination>
                     <name>programfileslinux</name>
                     <platforms>linux</platforms>
+                    <distributionFileList>
+                        <distributionFile>
+                            <origin>${build_project_directory}/assets/apkstudio.png</origin>
+                        </distributionFile>
+                    </distributionFileList>
                 </folder>
                 <folder>
                     <description>Program Files</description>
                     <destination>${installdir}</destination>
                     <name>programfileswindows</name>
                     <platforms>windows</platforms>
+                    <distributionFileList>
+                        <distributionFile>
+                            <origin>${build_project_directory}/windows/Qt5Widgets.dll</origin>
+                        </distributionFile>
+                        <distributionFile>
+                            <origin>${build_project_directory}/windows/apkstudio.exe</origin>
+                        </distributionFile>
+                        <distributionFile>
+                            <origin>${build_project_directory}/windows/D3Dcompiler_47.dll</origin>
+                        </distributionFile>
+                        <distributionFile>
+                            <origin>${build_project_directory}/windows/libEGL.dll</origin>
+                        </distributionFile>
+                        <distributionFile>
+                            <origin>${build_project_directory}/windows/libgcc_s_dw2-1.dll</origin>
+                        </distributionFile>
+                        <distributionFile>
+                            <origin>${build_project_directory}/windows/libGLESV2.dll</origin>
+                        </distributionFile>
+                        <distributionFile>
+                            <origin>${build_project_directory}/windows/libstdc++-6.dll</origin>
+                        </distributionFile>
+                        <distributionFile>
+                            <origin>${build_project_directory}/windows/libwinpthread-1.dll</origin>
+                        </distributionFile>
+                        <distributionFile>
+                            <origin>${build_project_directory}/windows/Qt5Core.dll</origin>
+                        </distributionFile>
+                        <distributionFile>
+                            <origin>${build_project_directory}/windows/Qt5Gui.dll</origin>
+                        </distributionFile>
+                        <distributionFile>
+                            <origin>${build_project_directory}/windows/Qt5Svg.dll</origin>
+                        </distributionFile>
+                        <distributionDirectory>
+                            <origin>${build_project_directory}/windows/iconengines</origin>
+                        </distributionDirectory>
+                        <distributionDirectory>
+                            <origin>${build_project_directory}/windows/imageformats</origin>
+                        </distributionDirectory>
+                        <distributionDirectory>
+                            <origin>${build_project_directory}/windows/platforms</origin>
+                        </distributionDirectory>
+                        <distributionDirectory>
+                            <origin>${build_project_directory}/windows/translations</origin>
+                        </distributionDirectory>
+                        <distributionFile>
+                            <origin>${build_project_directory}/assets/apkstudio.ico</origin>
+                        </distributionFile>
+                    </distributionFileList>
                 </folder>
                 <folder>
                     <description>Program Files</description>
@@ -50,36 +126,70 @@
                     <name>programfilesosx</name>
                     <platforms>osx</platforms>
                 </folder>
+                <folder>
+                    <description>User Home</description>
+                    <destination>${user_home_directory}/.apkstudio</destination>
+                    <name>userhome</name>
+                    <platforms>all</platforms>
+                    <distributionFileList>
+                        <distributionDirectory>
+                            <origin>${build_project_directory}/vendor</origin>
+                        </distributionDirectory>
+                    </distributionFileList>
+                </folder>
             </folderList>
             <startMenuShortcutList>
                 <startMenuShortcut>
                     <comment>Uninstall ${product_fullname}</comment>
-                    <name>Uninstall ${product_fullname}</name>
+                    <name>Uninstall</name>
                     <runAsAdmin>0</runAsAdmin>
                     <runInTerminal>0</runInTerminal>
                     <windowsExec>${installdir}/${uninstallerName}.exe</windowsExec>
                     <windowsExecArgs></windowsExecArgs>
-                    <windowsIcon></windowsIcon>
+                    <windowsIcon>${installdir}/apkstudio.ico</windowsIcon>
+                    <windowsPath>${installdir}/</windowsPath>
+                </startMenuShortcut>
+                <startMenuShortcut>
+                    <comment>Launch APK Studio</comment>
+                    <name>APK Studio</name>
+                    <runAsAdmin>0</runAsAdmin>
+                    <runInTerminal>0</runInTerminal>
+                    <windowsExec>${installdir}/apkstudio.exe</windowsExec>
+                    <windowsExecArgs></windowsExecArgs>
+                    <windowsIcon>${installdir}/apkstudio.ico</windowsIcon>
                     <windowsPath>${installdir}/</windowsPath>
                 </startMenuShortcut>
             </startMenuShortcutList>
         </component>
     </componentList>
+    <preInstallationActionList>
+        <autodetectJava>
+            <promptUser>0</promptUser>
+        </autodetectJava>
+    </preInstallationActionList>
+    <postUninstallationActionList>
+        <deleteFile>
+            <path>${user_home_directory}/.apkstudio</path>
+        </deleteFile>
+    </postUninstallationActionList>
+    <cdromDirectory>${product_shortname}-cdrom</cdromDirectory>
+    <compressionAlgorithm>lzham-ultra</compressionAlgorithm>
     <enableRollback>1</enableRollback>
     <enableTimestamp>1</enableTimestamp>
     <saveRelativePaths>1</saveRelativePaths>
     <vendor>Vaibhav Pandey</vendor>
+    <windowsExecutableIcon>${build_project_directory}/assets/apkstudio.ico</windowsExecutableIcon>
+    <windowsUninstallerExecutableIcon>${build_project_directory}/assets/apkstudio.ico</windowsUninstallerExecutableIcon>
     <parameterList>
         <directoryParameter>
             <name>installdir</name>
             <description>Installer.Parameter.installdir.description</description>
             <explanation>Installer.Parameter.installdir.explanation</explanation>
             <value></value>
-            <default>${platform_install_prefix}/${product_shortname}-${product_version}</default>
+            <default>${platform_install_prefix}/${product_shortname}/${product_version}</default>
             <allowEmptyValue>0</allowEmptyValue>
-            <ask>yes</ask>
             <cliOptionName>prefix</cliOptionName>
-            <mustBeWritable>yes</mustBeWritable>
+            <mustBeWritable>1</mustBeWritable>
             <mustExist>0</mustExist>
             <width>40</width>
         </directoryParameter>
