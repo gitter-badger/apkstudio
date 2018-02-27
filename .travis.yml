@@ -8,11 +8,16 @@ os:
   - linux
 
 before_install:
+ - pip install --user cpp-coveralls
  - sudo add-apt-repository --yes ppa:ubuntu-sdk-team/ppa
  - sudo apt-get update -qq
  - sudo apt-get install qt5-default qttools5-dev-tools
 
 script:
+ - ./configure --enable-gcov && make && make check
  - lrelease res/lang/en.ts
  - qmake apkstudio.pro CONFIG+=release
  - make
+
+after_success:
+ - coveralls --exclude lib --exclude tests --gcov-options '\-lp'
